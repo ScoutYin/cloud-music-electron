@@ -9,8 +9,6 @@ export default {
 </script>
 
 <style lang="scss">
-@import "../../assets/scss/var.scss";
-
 .main-frame-header {
   height: 50px;
   background-color: $theme-color;
