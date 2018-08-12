@@ -45,7 +45,14 @@ let rendererConfig = {
         test: /\.css$/,
         use: ExtractTextPlugin.extract({
           fallback: 'style-loader',
-          use: 'css-loader'
+          use: {
+            loader: 'css-loader'
+            // options: {
+            //   includePaths: [
+            //     "../node_modules/normalize.css"
+            //   ]
+            // }
+          }
         })
       },
       {
@@ -133,6 +140,7 @@ let rendererConfig = {
   resolve: {
     alias: {
       '@': path.join(__dirname, '../src/renderer'),
+      '~': path.join(__dirname, '../src/renderer/components'),
       'vue$': 'vue/dist/vue.esm.js'
     },
     extensions: ['.js', '.vue', '.json', '.css', '.node']

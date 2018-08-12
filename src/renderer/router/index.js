@@ -7,8 +7,15 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'landing-page',
-      component: require('@/components/LandingPage').default
+      name: 'home',
+      component: () => import('@/views/home'),
+      children: [
+        {
+          path: 'find-music',
+          name: 'find-music',
+          component: () => import('@/views/find-music')
+        }
+      ]
     },
     {
       path: '*',

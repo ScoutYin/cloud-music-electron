@@ -5,11 +5,16 @@
 </template>
 
 <script>
-  export default {
-    name: 'cloud-music-electron'
-  }
+export default {
+  name: 'cloud-music-electron'
+}
 </script>
 
-<style>
-  /* CSS */
+<style lang="scss">
+@import "./assets/scss/index.scss";
+
+#app {
+  height: 100%;
+}
+
 </style>
